@@ -1,0 +1,159 @@
+{
+  "id": {
+    "providerName": "admin",
+    "apiName": "DirectoryService",
+    "version": "1.0.SNAPSHOT"
+  },
+  "uuid": "a2e9df78-f0f1-41d3-a602-dc590639579d",
+  "description": "This is use API",
+  "type": "NULL",
+  "context": "/user/1.0.SNAPSHOT",
+  "contextTemplate": "/user/{version}",
+  "tags": [
+    "security",
+    "user"
+  ],
+  "documents": [],
+  "lastUpdated": "Mar 27, 2018 2:10:45 PM",
+  "availableTiers": [
+    {
+      "name": "Bronze",
+      "displayName": "Bronze",
+      "description": "Allows 1000 requests per minute",
+      "requestsPerMin": 1000,
+      "requestCount": 1000,
+      "unitTime": 1,
+      "timeUnit": "min",
+      "tierPlan": "FREE",
+      "stopOnQuotaReached": true
+    },
+    {
+      "name": "Gold",
+      "displayName": "Gold",
+      "description": "Allows 5000 requests per minute",
+      "requestsPerMin": 5000,
+      "requestCount": 5000,
+      "unitTime": 1,
+      "timeUnit": "min",
+      "tierPlan": "FREE",
+      "stopOnQuotaReached": true
+    },
+    {
+      "name": "Silver",
+      "displayName": "Silver",
+      "description": "Allows 2000 requests per minute",
+      "requestsPerMin": 2000,
+      "requestCount": 2000,
+      "unitTime": 1,
+      "timeUnit": "min",
+      "tierPlan": "FREE",
+      "stopOnQuotaReached": true
+    },
+    {
+      "name": "Unlimited",
+      "displayName": "Unlimited",
+      "description": "Allows unlimited requests",
+      "requestsPerMin": 2147483647,
+      "requestCount": 2147483647,
+      "unitTime": 0,
+      "timeUnit": "ms",
+      "tierPlan": "FREE",
+      "stopOnQuotaReached": true
+    }
+  ],
+  "availableSubscriptionLevelPolicies": [],
+  "uriTemplates": [
+    {
+      "uriTemplate": "/service/user",
+      "httpVerb": "POST",
+      "authType": "Any",
+      "httpVerbs": [
+        "POST"
+      ],
+      "authTypes": [
+        "Any"
+      ],
+      "throttlingConditions": [],
+      "throttlingTier": "Unlimited",
+      "throttlingTiers": [
+        "Unlimited"
+      ],
+      "mediationScript": "null",
+      "scopes": [
+        null
+      ],
+      "mediationScripts": {}
+    },
+    {
+      "uriTemplate": "/service/user/{id}",
+      "httpVerb": "GET",
+      "authType": "Any",
+      "httpVerbs": [
+        "GET",
+        "DELETE",
+        "PUT"
+      ],
+      "authTypes": [
+        "Any",
+        "Any",
+        "Any"
+      ],
+      "throttlingConditions": [],
+      "throttlingTier": "Unlimited",
+      "throttlingTiers": [
+        "Unlimited",
+        "Unlimited",
+        "Unlimited"
+      ],
+      "mediationScript": "null",
+      "scopes": [
+        null,
+        null,
+        null
+      ],
+      "mediationScripts": {}
+    }
+  ],
+  "apiHeaderChanged": false,
+  "apiResourcePatternsChanged": false,
+  "status": "CREATED",
+  "visibility": "public",
+  "endpointSecured": false,
+  "endpointAuthDigest": false,
+  "transports": "http,https",
+  "advertiseOnly": false,
+  "corsConfiguration": {
+    "corsConfigurationEnabled": false,
+    "accessControlAllowOrigins": [
+      "*"
+    ],
+    "accessControlAllowCredentials": false,
+    "accessControlAllowHeaders": [
+      "authorization",
+      "Access-Control-Allow-Origin",
+      "Content-Type",
+      "SOAPAction"
+    ],
+    "accessControlAllowMethods": [
+      "GET",
+      "PUT",
+      "POST",
+      "DELETE",
+      "PATCH",
+      "OPTIONS"
+    ]
+  },
+  "endpointConfig": "{\"production_endpoints\":{\"url\":\"http://locahost:8087\",\"config\":null,\"template_not_supported\":false},\"sandbox_endpoints\":{\"url\":\"http://locahost:8087\",\"config\":null,\"template_not_supported\":false},\"endpoint_type\":\"http\"}",
+  "responseCache": "Disabled",
+  "cacheTimeout": 300,
+  "implementation": "ENDPOINT",
+  "scopes": [],
+  "isDefaultVersion": false,
+  "isPublishedDefaultVersion": false,
+  "environments": [
+    "Production and Sandbox"
+  ],
+  "createdTime": "1522185005390",
+  "rating": 0.0,
+  "isLatest": true
+}

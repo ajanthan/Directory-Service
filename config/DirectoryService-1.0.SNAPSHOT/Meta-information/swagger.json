@@ -1,0 +1,185 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "version": "1.0.SNAPSHOT",
+    "title": "DirectoryService",
+    "contact": {
+      "name": "Ajanthan Bala",
+      "url": "http://wso2.com",
+      "email": "ajanthan@wso2.com"
+    },
+    "license": {
+      "name": "Apache 2.0",
+      "url": "http://www.apache.org/licenses/LICENSE-2.0"
+    },
+    "description": "This is use API"
+  },
+  "basePath": "/service/user",
+  "tags": [
+    {
+      "name": "DirectoryService"
+    }
+  ],
+  "paths": {
+    "/service/user": {
+      "post": {
+        "tags": [
+          "DirectoryService"
+        ],
+        "summary": "Add an User",
+        "description": "",
+        "operationId": "post",
+        "consumes": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "description": "user",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/User"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "User has been added"
+          },
+          "500": {
+            "description": "Error in adding user"
+          }
+        },
+        "x-auth-type": "Application \u0026 Application User",
+        "x-throttling-tier": "Unlimited"
+      }
+    },
+    "/service/user/{id}": {
+      "get": {
+        "tags": [
+          "DirectoryService"
+        ],
+        "summary": "Get User by ID",
+        "description": "",
+        "operationId": "get",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "id",
+            "required": true,
+            "type": "string",
+            "x-example": "001"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "valid user found"
+          },
+          "404": {
+            "description": "valid user is not found"
+          }
+        },
+        "x-auth-type": "Application \u0026 Application User",
+        "x-throttling-tier": "Unlimited"
+      },
+      "put": {
+        "tags": [
+          "DirectoryService"
+        ],
+        "summary": "Edit an User",
+        "description": "",
+        "operationId": "put",
+        "consumes": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "description": "user",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/User"
+            }
+          },
+          {
+            "name": "id",
+            "in": "path",
+            "description": "id",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "User has been edited"
+          },
+          "500": {
+            "description": "Error in editing user"
+          }
+        },
+        "x-auth-type": "Application \u0026 Application User",
+        "x-throttling-tier": "Unlimited"
+      },
+      "delete": {
+        "tags": [
+          "DirectoryService"
+        ],
+        "summary": "Delete an User by id",
+        "description": "",
+        "operationId": "delete",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "id",
+            "required": true,
+            "type": "string",
+            "x-example": "001"
+          }
+        ],
+        "responses": {
+          "202": {
+            "description": "User has been deleted"
+          },
+          "500": {
+            "description": "Error in deleting user"
+          }
+        },
+        "x-auth-type": "Application \u0026 Application User",
+        "x-throttling-tier": "Unlimited"
+      }
+    }
+  },
+  "definitions": {
+    "User": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "username": {
+          "type": "string"
+        },
+        "firstName": {
+          "type": "string"
+        },
+        "lastName": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        },
+        "dob": {
+          "type": "string",
+          "format": "date-time"
+        }
+      }
+    }
+  }
+}
